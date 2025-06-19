@@ -1,0 +1,5 @@
+ Creating this note on the test branch
+
+After committing, I can add this line to the note and commit again.
+
+Then I can add another line!
