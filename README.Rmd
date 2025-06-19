@@ -45,10 +45,17 @@ For example, to alias the useful git log with 4 options above:
 `git config --global alias.logops "log --oneline --graph --decorate --parents"`
  Note for commands with more than one word, we need to wrap it in quotes.
 
+With any alias, you can still add additional flags after passing the alias. 
+
 To see the aliases in the git config file, print the file which is in the home directory:
 `cat ~/.gitconfig`
 
-This way of setting aliases within git is still a little cumbersome. After all, you have to type out git first this the alias. The other, more common way, of using aliases with the command line is to set them up in zsh/bash etc
+To remove an alias, use the `--unset` flag:
+`git config --global --unset alias.<name>`
+
+This way of setting aliases within git is still a little cumbersome. After all, you have to type out git first this the alias. The other, more common way, of using aliases with the command line is to set them up in the shell (zsh, bash etc)
+
+For the zsh shell, you can set aliases in the `~/.zshrhc` file, although more advanced shell configurations will use that file to call others files, including a `aliases.zsh` file that contains only shell aliases.
 
 ### git config
 While we're on the topic of `git config`, there are a few other global configuration options i need to set. One is my user info (name and email) which is currently defaulting to the system user name.
@@ -68,5 +75,12 @@ But if you mess up and make a typo or do something nonsensical to git, then none
 ### git worktree
 Where branching requires you to commit existing changes, sometimes that is not desirable but you still need to switch to a new branch to handle something else. That is where `git worktree` comes in. 
  
+### git prune
+
+
+### fast forward
+
+
+
 
 
