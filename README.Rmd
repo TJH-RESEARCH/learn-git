@@ -6,6 +6,8 @@ I will be study along with Happy Git and GitHub for the useR https://happygitwit
 
 The first 2 sections (Chapter 1-19) are a little too basic for me. 
 
+
+
 ### git diff
 
 I've just made these changes to the markdown: adding the git diff heading, and writing this sentence. I haven't staged or committed this yet. Now I'll run `git diff`. It shows the changes. Once I stage this changed file, git diff will again show no changes.
@@ -23,6 +25,8 @@ By default, `git diff` shows the line-by-line difference, even if only a single 
 
 For a summary of the difference, use `git diff --stat`.
 
+
+
 ### git log
 `git log` shows a history of commits. A few useful flags:
 `git log --oneline`: condenses the output to one line per commi
@@ -34,6 +38,8 @@ Add these all together for a useful output
 `git log --oneline --graph --decorate --parents`
 
 Probly useful to give that an alias
+
+
 
 ### Aliases with git
 To create an alias with git's built in system, change use `git config`. The `--global` flag makes this apply to the user and not just the curret project.: `git config --global`
@@ -57,6 +63,9 @@ This way of setting aliases within git is still a little cumbersome. After all, 
 
 For the zsh shell, you can set aliases in the `~/.zshrhc` file, although more advanced shell configurations will use that file to call others files, including a `aliases.zsh` file that contains only shell aliases.
 
+After editing `~/.zshrhc` you will need to source the file for it to update the configuration.: `source ~/.zshrc` (this is another useful one to shortcut).
+
+
 ### git config
 While we're on the topic of `git config`, there are a few other global configuration options i need to set. One is my user info (name and email) which is currently defaulting to the system user name.
 
@@ -69,7 +78,11 @@ Of course, you can also edit this in vim:
 But if you mess up and make a typo or do something nonsensical to git, then none of your git commands will execute. They will display fatal and declare which line of the config file has an error. 
 
 ### git branch
+Making a new branch is easy enough: `git branch -b <name.`
 
+Managing branches in an orderly and coordinated way is a bit more difficult. There are several strategies
+1. Git Flow
+- Development occurs on the dev branch. Before deploying to the main branch, a release branch is made for testing and debugging. Hotfix branches can also be used to quickly fix issues with the main branch. In this system, the dev branch can go many commits before it is merged with the main branch. 
 
 
 ### git worktree
