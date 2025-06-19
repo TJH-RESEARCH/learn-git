@@ -19,3 +19,9 @@ I've just made these changes to the markdown: adding the git diff heading, and w
 It shows the changes. Once I stage this changed file, git diff will again show no changes.
 
 To view differences between what is in the staging and what is already committed, enter `git diff --staged`. `git diff --cached` is an alias for `git diff --staged`.
+
+The `-w` flag will tell `git diff` to ignore whitespace changes.
+
+`git diff` can also show the differences between two different commits. 
+
+To view a log of previous commits, use `git log` 
