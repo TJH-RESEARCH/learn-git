@@ -86,10 +86,14 @@ Managing branches in an orderly and coordinated way is a bit more difficult. The
 
 
 ### git merge
-So you create a new branch, develop something on it, and now need to get it back to the main branch. You need to merge. The most basic way is to use `git merge`. Start on the main branch, then `git merge <feature-branch>`
+So you create a new branch, develop something on it, and now need to get it back to the main branch. You need to merge. The most basic way is to use `git merge`. Start on the main branch, then `git merge <feature-branch>`. This is a 3-way merge. 
+
+Merge is used to bring the changes from another branch to the branch you are currently on. Typically, this means we are on the main branch and merging in changes from a feature branch. But sometimes we are on the feature branch and want to incorporate changes that have happened on the main branch without yet merging the feature to the main. For example, if you start working on a feature, and in the meantine there are other features pushed to the main branch, you may want to incorporate these into your feature branch to ensure your feature is compatable with the other changes. First, you would checkout the feature branch, then merge the main branch to the feature. This is the standard 3-way merge.  
+
+It is also common that there have been no commits on the main branch while there have been commits on the feature branch. In this case, the feature branch is just a linear path from the main branch. Merging while on the main branch performs a "fast forward".  
 
 ### git rebase
-Merge is used to bring the changes from another branch to the branch you are currently on. Typically, this means we are on the main branch and merging in changes from a feature branch. But sometimes we are on the feature branch and want to incorporate changes that have happened on the main branch without yet merging the feature to the main. For example, if you start working on a feature, and in the meantine there are other features pushed to the main branch, you may want to incorporate these into your feature branch to ensure your feature is compatible with the other changes. This is what `git rebase` is for.
+
 
 
 ### git worktree
@@ -98,7 +102,7 @@ Where branching requires you to commit existing changes, sometimes that is not d
 ### git prune
 
 
-### fast forward
+
 
 
 
