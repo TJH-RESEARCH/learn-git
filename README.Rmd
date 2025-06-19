@@ -25,7 +25,48 @@ For a summary of the difference, use `git diff --stat`.
 
 ### git log
 `git log` shows a history of commits. A few useful flags:
-`git log --oneline`: condenses the output to one line per commit
+`git log --oneline`: condenses the output to one line per commi
+`git log --graph` adds a simple node-edge graph to show relationship between commits, branches, and merges
+`git log --parents` shows the parentc commit for each new commit
+`git log --decorate` provides branch and tag info
 
+Add these all together for a useful output
+`git log --oneline --graph --decorate --parents`
+
+Probly useful to give that an alias
+
+### Aliases with git
+To create an alias with git's built in system, change use `git config`. The `--global` flag makes this apply to the user and not just the curret project.: `git config --global`
+
+Then to creat the alias add `alias.<nam>e <command>`
+
+For example, to alias the useful git log with 4 options above:
+
+`git config --global alias.logops "log --oneline --graph --decorate --parents"`
+ Note for commands with more than one word, we need to wrap it in quotes.
+
+To see the aliases in the git config file, print the file which is in the home directory:
+`cat ~/.gitconfig`
+
+This way of setting aliases within git is still a little cumbersome. After all, you have to type out git first this the alias. The other, more common way, of using aliases with the command line is to set them up in zsh/bash etc
+
+### git config
+While we're on the topic of `git config`, there are a few other global configuration options i need to set. One is my user info (name and email) which is currently defaulting to the system user name.
+
+`git config --global user.name "FIRST LAST"`
+`git config --global user.email "address"
+
+Of course, you can also edit this in vim:
+`vi ~/.gitignore`
+
+But if you mess up and make a typo or do something nonsensical to git, then none of your git commands will execute. They will display fatal and declare which line of the config file has an error. 
+
+### git branch
+
+
+
+### git worktree
+Where branching requires you to commit existing changes, sometimes that is not desirable but you still need to switch to a new branch to handle something else. That is where `git worktree` comes in. 
+ 
 
 
