@@ -78,7 +78,7 @@ Of course, you can also edit this in vim:
 But if you mess up and make a typo or do something nonsensical to git, then none of your git commands will execute. They will display fatal and declare which line of the config file has an error. 
 
 ### git branch
-Making a new branch is easy enough: `git branch -b <name.`
+Making a new branch is easy enough: `git branch <name>.` Another common approach is to create the branch and checkout the branch in one line. `git checkout -b <name>`. checkout means switching to that branch. 
 
 Managing branches in an orderly and coordinated way is a bit more difficult. There are several strategies
 1. Git Flow
