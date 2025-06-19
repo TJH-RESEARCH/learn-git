@@ -19,6 +19,8 @@ To view a log of previous commits, use `git log`. Use the first 7 digits of the 
 
 `git diff` can also compare two files with the --no-index flag. `git diff --no-index <file1> <file2>`. This will work with files even outside of the git directory.
 
+By default, `git diff` shows the line-by-line difference, even if only a single character is changed. To display these smaller differences only, use the --word-diff flag: `git diff --word-diff`.
+
 ### git log
 
 
