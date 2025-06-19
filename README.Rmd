@@ -11,3 +11,11 @@ This project is to serve as an example while I learn git at a deeper level.
 I will be study along with Happy Git and GitHub for the useR https://happygitwithr.com
 
 The first 2 sections (Chapter 1-19) are a little too basic for me. 
+
+### git diff
+
+I've just made these changes to the markdown: adding the git diff heading, and writing this sentence. I haven't staged or committed this yet. Now I'll run `git diff`. 
+
+It shows the changes. Once I stage this changed file, git diff will again show no changes.
+
+To view differences between what is in the staging and what is already committed, enter `git diff --staged`. `git diff --cached` is an alias for `git diff --staged`.
