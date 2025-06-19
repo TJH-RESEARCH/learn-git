@@ -1,9 +1,3 @@
----
-title: "README"
-output: html_document
-date: "2025-06-16"
----
-
 ## Learning Git R Project
 
 This project is to serve as an example while I learn git at a deeper level. 
@@ -14,14 +8,17 @@ The first 2 sections (Chapter 1-19) are a little too basic for me.
 
 ### git diff
 
-I've just made these changes to the markdown: adding the git diff heading, and writing this sentence. I haven't staged or committed this yet. Now I'll run `git diff`. 
-
-It shows the changes. Once I stage this changed file, git diff will again show no changes.
+I've just made these changes to the markdown: adding the git diff heading, and writing this sentence. I haven't staged or committed this yet. Now I'll run `git diff`. It shows the changes. Once I stage this changed file, git diff will again show no changes.
 
 To view differences between what is in the staging and what is already committed, enter `git diff --staged`. `git diff --cached` is an alias for `git diff --staged`.
 
 The `-w` flag will tell `git diff` to ignore whitespace changes.
 
-`git diff` can also show the differences between two different commits. 
+`git diff` can also show the differences between two different commits.
+To view a log of previous commits, use `git log`. Use the first 7 digits of the hash. To compare the commits: `git diff <commit1> <commit2>`
 
-To view a log of previous commits, use `git log` 
+`git diff` can also compare two files with the --no-index flag. `git diff --no-index <file1> <file2>`. This will work with files even outside of the git directory.
+
+### git log
+
+
