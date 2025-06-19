@@ -85,6 +85,10 @@ Managing branches in an orderly and coordinated way is a bit more difficult. The
 - Development occurs on the dev branch. Before deploying to the main branch, a release branch is made for testing and debugging. Hotfix branches can also be used to quickly fix issues with the main branch. In this system, the dev branch can go many commits before it is merged with the main branch. 
 
 
+### git merge
+So you create a new branch, develop something on it, and now need to get it back to the main branch. You need to merge. The most basic way is to use `git merge`. Start on the main branch, then `git merge <feature-branch>`
+
+
 ### git worktree
 Where branching requires you to commit existing changes, sometimes that is not desirable but you still need to switch to a new branch to handle something else. That is where `git worktree` comes in. 
  
