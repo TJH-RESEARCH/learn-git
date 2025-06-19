@@ -10,3 +10,4 @@ This project is to serve as an example while I learn git at a deeper level.
 
 I will be study along with Happy Git and GitHub for the useR https://happygitwithr.com
 
+The first 2 sections (Chapter 1-19) are a little too basic for me. 
